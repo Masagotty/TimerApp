@@ -15,8 +15,8 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView mTimeTextView;
-    TextView mResultTextView;
+//    TextView mTimeTextView;
+//    TextView mResultTextView;
 
     Timer mTimer;
 
@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTimeTextView = (TextView) findViewById(R.id.textView);
-        mResultTextView = (TextView) findViewById(R.id.textView2);
+//        mTimeTextView = (TextView) findViewById(R.id.textView);
+//        mResultTextView = (TextView) findViewById(R.id.textView2);
 
         mHandler = new Handler();
 
@@ -73,11 +73,15 @@ public class MainActivity extends AppCompatActivity {
             mTimer = null;
 
             if (mTime == 0) {
-                mTimeTextView.setText(String.valueOf(mTime));
-                mResultTextView.setText("おめでとう！");
+//                mTimeTextView.setText(String.valueOf(mTime));
+//                mResultTextView.setText("おめでとう！");
+                Intent intent = new Intent(this, SuccessActivity.class);
+                startActivity(intent);
             } else {
-                mTimeTextView.setText(String.valueOf(mTime));
-                mResultTextView.setText("残念！");
+//                mTimeTextView.setText(String.valueOf(mTime));
+//                mResultTextView.setText("残念！");
+                Intent intent = new Intent(this, FailActivity.class);
+                startActivity(intent);
             }
         }
     }
