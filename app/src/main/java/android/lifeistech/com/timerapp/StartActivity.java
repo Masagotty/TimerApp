@@ -13,9 +13,27 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
     }
 
-    public void button (View v) {
+    public void button10(View v) {
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("minutes", 10);
+        startActivity(intent);
+    }
+
+    public void button5 (View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("minutes", 5);
+        startActivity(intent);
+    }
+
+    public void button3 (View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("minutes", 3);
+        startActivity(intent);
+    }
+
+    public void button100 (View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("minutes", 100);
         startActivity(intent);
     }
 }
